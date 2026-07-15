@@ -51,6 +51,8 @@ else
     brew install openjdk
 fi
 
+sudo ln -sfn /opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk/ /Library/Java/JavaVirtualMachines/openjdk-25.jdk
+
 log "Installing programming languages"
 
 brew install \
@@ -61,9 +63,10 @@ brew install \
     yarn \
     maven \
     gradle \
-    rustup \
     protobuf \
     grpcurl
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 log "Installing containers and Kubernetes tooling"
 
@@ -96,8 +99,6 @@ brew install \
     postgresql
 
 log "Installing fonts"
-
-brew tap homebrew/cask-fonts
 
 brew install --cask \
     font-jetbrains-mono \
