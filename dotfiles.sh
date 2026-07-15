@@ -29,7 +29,9 @@ append_if_missing 'export PATH="$HOME/.local/bin:$PATH"'
 append_if_missing 'export GOPATH="$HOME/go"'
 append_if_missing 'export PATH="$GOPATH/bin:$PATH"'
 
-append_if_missing 'export JAVA_HOME=$(/usr/libexec/java_home)'
+append_if_missing 'export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-25.jdk/Contents/Home/bin/java"'
+append_if_missing 'export JDK_HOME="/Library/Java/JavaVirtualMachines/openjdk-25.jdk/Contents/Home/bin/"'
+append_if_missing 'export PATH="$JDK_HOME:$PATH"'
 
 append_if_missing 'eval "$(zoxide init zsh)"'
 append_if_missing 'eval "$(starship init zsh)"'

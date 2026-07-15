@@ -17,7 +17,7 @@ brew install --cask \
     raycast \
     obsidian \
     spotify \
-    firefox
+    brave-browser
 
 brew install --cask jetbrains-toolbox
 
